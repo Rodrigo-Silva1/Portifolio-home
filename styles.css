@@ -1,0 +1,220 @@
+/* Reset e configurações iniciais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff; /* Azul claro para um fundo mais agradável */
+    color: #444; /* Tom mais suave para o texto */
+    transition: background-color 0.3s, color 0.3s;
+    padding-top: 80px; /* Espaço para o cabeçalho fixo */
+}
+
+/* Tema escuro */
+body.dark {
+    background-color: #1e1e2f; /* Fundo escuro com tom mais moderno */
+    color: #e0e0e0; /* Texto claro */
+}
+
+/* Botão de tema */
+#toggleTheme {
+    position: fixed;
+    top: 10px;
+    right: 200px;
+    z-index: 1000;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: #ff7f50; /* Coral para destaque */
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#toggleTheme:hover {
+    background: #ff6347; /* Tom mais vibrante ao passar o mouse */
+}
+
+/* Cabeçalho fixo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #4caf50; /* Verde vibrante */
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c8e6c9; /* Verde claro */
+}
+
+/* Seções */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    background: #ffffff; /* Fundo branco limpo */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Filtro de projetos */
+.filtro button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    background: #ffeb3b; /* Amarelo vibrante */
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.filtro button.active,
+.filtro button:hover {
+    background: #ffc107; /* Amarelo mais escuro */
+    color: #fff;
+}
+
+/* Projetos */
+.projeto {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #f9f9f9; /* Fundo claro */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projeto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste de dimensões para imagens dos projetos */
+.projeto img {
+    width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Aplica bordas arredondadas como no restante do design */
+    object-fit: cover; /* Garante que a imagem seja cortada para caber no espaço */
+}
+
+/* Formulário de Contato */
+form button[type="submit"] {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #2196f3; /* Azul vibrante */
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background: #1976d2; /* Azul mais escuro */
+}
+
+
+/* Estilização da seção de contato */
+#contato {
+    background: #f9f9f9; /* Fundo claro */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contato h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4caf50; /* Verde vibrante */
+    font-size: 1.8em;
+}
+
+#formContato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formContato label {
+    font-weight: bold;
+    color: #444;
+}
+
+#formContato input,
+#formContato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+#formContato input:focus,
+#formContato textarea:focus {
+    border-color: #4caf50; /* Verde vibrante */
+    outline: none;
+}
+
+#formContato textarea {
+    resize: none; /* Remove o redimensionamento */
+}
+
+#formContato button[type="submit"] {
+    padding: 12px;
+    border: none;
+    background: #4caf50; /* Verde vibrante */
+    color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#formContato button[type="submit"]:hover {
+    background: #388e3c; /* Verde mais escuro */
+}
+
+.feedback {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #4caf50; /* Verde vibrante */
+    color: #fff;
+    margin-top: 20px;
+}

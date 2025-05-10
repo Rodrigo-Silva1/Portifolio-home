@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Avançado</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- Botão de alternância de tema -->
+  <button id="toggleTheme">Tema Escuro/Claro</button>
+
+  <!-- Cabeçalho com navegação fixa -->
+  <header id="header">
+    <h1>Meu Portfólio</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção Sobre Mim -->
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Olá! Sou um desenvolvedor apaixonado por tecnologia, aprendendo a fazer front-end e este é meu primeiro projeto.</p>
+  </section>
+
+  <!-- Seção Projetos com filtro -->
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="filtro">
+      <button data-filter="todos" class="active">Todos</button>
+      <button data-filter="web">Web</button>
+      <button data-filter="mobile">Mobile</button>
+      <button data-filter="outros">Outros</button>
+    </div>
+    <div class="projetos-container">
+      <!-- Exemplo de projeto -->
+      <article class="projeto" data-category="web">
+        <img src="../imagens/Captura de tela 2025-05-09 202323.png" alt="Projeto Web 1">
+        <h3>Projeto Web 1</h3>
+        <p>Uma tentativa pessoal de recriar um reprodutor de vídeo.</p>
+        <a href="https://rodrigo-silva1.github.io/Portif-lio/" target="_blank">Ver Projeto</a>
+      </article>
+      <article class="projeto" data-category="mobile">
+        <img src="imagens/projeto2.jpg" alt="Projeto Mobile 1">
+        <h3>Projeto Mobile 1</h3>
+        <p>Descrição breve do projeto mobile.</p>
+        <a href="#" target="_blank">Ver Projeto</a>
+      </article>
+      <article class="projeto" data-category="outros">
+        <img src="imagens/projeto3.jpg" alt="Projeto Outro 1">
+        <h3>Projeto Outro 1</h3>
+        <p>Descrição breve de outro projeto.</p>
+        <a href="#" target="_blank">Ver Projeto</a>
+      </article>
+      <!-- Adicione mais projetos conforme necessário -->
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <form id="formContato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="feedback" class="feedback"></p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+    <p>&copy; Dev: Rodrigo da Silva Dantas</p>
+  </footer>
+
+  <script src="../script/script.js"></script>
+</body>
+</html>
