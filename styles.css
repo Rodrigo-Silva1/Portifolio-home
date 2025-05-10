@@ -22,7 +22,7 @@ body.dark {
 
 /* Botão de tema */
 #toggleTheme {
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 200px;
     z-index: 1000;
@@ -40,7 +40,7 @@ body.dark {
 
 /* Cabeçalho fixo */
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -83,6 +83,26 @@ section {
 section.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Botão "Mais" */
+.btn-mais {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 10px;
+    background: none;
+    color: #888; /* Cinza */
+    border: 1px solid #888;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-mais:hover {
+    background: #4caf50; /* Verde vibrante */
+    color: #fff;
+    border-color: #4caf50;
 }
 
 /* Filtro de projetos */

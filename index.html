@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Avançado</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <!-- Botão de alternância de tema -->
@@ -25,8 +25,11 @@
   <!-- Seção Sobre Mim -->
   <section id="sobre">
     <h2>Sobre Mim</h2>
-    <p>Olá! Sou um desenvolvedor apaixonado por tecnologia, aprendendo a fazer front-end e este é meu primeiro projeto.</p>
-  </section>
+    <p>
+        Olá! Sou um desenvolvedor apaixonado por tecnologia, aprendendo a fazer front-end e este é meu primeiro projeto.
+        <button onclick="window.location.href='sobre.html'" class="btn-mais">Mais</button>
+    </p>
+</section>
 
   <!-- Seção Projetos com filtro -->
   <section id="projetos">
@@ -40,21 +43,21 @@
     <div class="projetos-container">
       <!-- Exemplo de projeto -->
       <article class="projeto" data-category="web">
-        <img src="../imagens/Captura de tela 2025-05-09 202323.png" alt="Projeto Web 1">
+        <img src="./Captura de tela 2025-05-09 202323.png" alt="Projeto Web 1">
         <h3>Projeto Web 1</h3>
-        <p>Uma tentativa pessoal de recriar um reprodutor de vídeo.</p>
-        <a href="https://rodrigo-silva1.github.io/Portif-lio/" target="_blank">Ver Projeto</a>
+        <p>Uma tentativa pessoal de recriar um reprodutor de vídeo. obs: Ainda não consegui subir um vídeo para reprodução</p>
+        <a href="https://rodrigo-silva1.github.io/Portif-lio/home.html" target="_blank">Ver Projeto</a>
       </article>
       <article class="projeto" data-category="mobile">
         <img src="imagens/projeto2.jpg" alt="Projeto Mobile 1">
         <h3>Projeto Mobile 1</h3>
-        <p>Descrição breve do projeto mobile.</p>
+        <p>Em desenvolvimento.</p>
         <a href="#" target="_blank">Ver Projeto</a>
       </article>
       <article class="projeto" data-category="outros">
         <img src="imagens/projeto3.jpg" alt="Projeto Outro 1">
         <h3>Projeto Outro 1</h3>
-        <p>Descrição breve de outro projeto.</p>
+        <p>Em desenvolvimento.</p>
         <a href="#" target="_blank">Ver Projeto</a>
       </article>
       <!-- Adicione mais projetos conforme necessário -->
@@ -85,6 +88,6 @@
     <p>&copy; Dev: Rodrigo da Silva Dantas</p>
   </footer>
 
-  <script src="../script/script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
