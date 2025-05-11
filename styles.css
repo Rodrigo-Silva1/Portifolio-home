@@ -24,18 +24,29 @@ body.dark {
 #toggleTheme {
     position: absolute;
     top: 10px;
-    right: 200px;
+    right: 150px;
     z-index: 1000;
     padding: 10px 15px;
     cursor: pointer;
-    background: #ff7f50; /* Coral para destaque */
+    background: #038857; /* Coral para destaque */
     color: #fff;
     border-radius: 5px;
     transition: background 0.3s;
+    font-size: 1em;
 }
 
 #toggleTheme:hover {
     background: #ff6347; /* Tom mais vibrante ao passar o mouse */
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+    #toggleTheme {
+        padding: 8px 12px;
+        font-size: 0.9em;
+        top: 15px;
+        right: 15px;
+    }
 }
 
 /* Cabeçalho fixo */
